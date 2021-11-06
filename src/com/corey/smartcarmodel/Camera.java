@@ -14,7 +14,7 @@ public class Camera extends SmartAssembly {
 	public static void getSystemCheck() {
 		System.out.println( "Camera - Check Ok");
 	}
-	public static void update Status() {
+	public static void updateStatus() {
 		System.out.println( "Camera - Status Updated");
 	}
 	public static void recordVideo() {
