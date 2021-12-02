@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.corey.smartcarmodel;
+package com.corey.smartrovermodel;
 
 /**
  * @author corey
