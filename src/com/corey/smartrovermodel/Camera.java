@@ -27,4 +27,4 @@ public class Camera {
 	public static void takePhoto() {
 		System.out.println( "Camera - Photo Taken");
 	}	
-} a
+} 
