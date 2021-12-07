@@ -29,4 +29,10 @@ public class ADC {
 	public static void updatePowerStatus() {
 		System.out.println( "ADC - Power Status updated to XXX");
 	}	
+	public static void powerOn() {
+		System.out.println( "ADC - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "ADC - Power Off");
+	}	
 }

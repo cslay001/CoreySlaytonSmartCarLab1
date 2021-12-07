@@ -29,4 +29,10 @@ public class ECU {
 	public static void updatePowerStatus() {
 		System.out.println( "ECU - Power Status updated to XXX");
 	}	
+	public static void powerOn() {
+		System.out.println( "ECU - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "ECU - Power Off");
+	}	
 }

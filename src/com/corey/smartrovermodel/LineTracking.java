@@ -22,5 +22,11 @@ public class LineTracking {
 	}		
 	public static void getLinePosition() {
 		System.out.println( "LineTracking - Line Position Detected");
-	}		
+	}	
+	public static void powerOn() {
+		System.out.println( "LineTracking - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "LineTracking - Power Off");
+	}	
 }

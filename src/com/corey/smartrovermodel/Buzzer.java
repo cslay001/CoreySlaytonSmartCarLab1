@@ -53,4 +53,10 @@ public class Buzzer {
 	public static void updateBuzzerPin() {
 		System.out.println( "Buzzer - BuzzerPin updated to XXX");
 	}
+	public static void powerOn() {
+		System.out.println( "Buzzer - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "Buzzer - Power Off");
+	}	
 }

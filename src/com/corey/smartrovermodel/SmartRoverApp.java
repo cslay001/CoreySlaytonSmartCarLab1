@@ -29,4 +29,10 @@ public class SmartRoverApp {
 	public static void updatePowerStatus() {
 		System.out.println( "SmartRoverApp - Power Status updated to XXX");
 	}	
+	public static void powerOn() {
+		System.out.println( "SmartRoverApp - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "SmartRoverApp - Power Off");
+	}	
 }

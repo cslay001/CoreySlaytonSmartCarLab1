@@ -19,4 +19,10 @@ public class Sensor {
 	public static void getMaintenanceStatus() {
 		System.out.println( "Sensor - Status Updated");
 	}		
+	public static void powerOn() {
+		System.out.println( "Sensor - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "Sensor - Power Off");
+	}	
 }

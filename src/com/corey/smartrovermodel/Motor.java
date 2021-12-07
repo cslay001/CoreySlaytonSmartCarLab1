@@ -32,4 +32,10 @@ public class Motor {
 	public static void goRight() {
 		System.out.println( "Motor - Moving Right");
 	}
+	public static void powerOn() {
+		System.out.println( "Motor - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "Motor - Power Off");
+	}	
 }

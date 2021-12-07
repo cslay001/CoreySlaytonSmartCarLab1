@@ -27,4 +27,10 @@ public class Camera {
 	public static void takePhoto() {
 		System.out.println( "Camera - Photo Taken");
 	}	
+	public static void powerOn() {
+		System.out.println( "Camera - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "Camera - Power Off");
+	}	
 } 

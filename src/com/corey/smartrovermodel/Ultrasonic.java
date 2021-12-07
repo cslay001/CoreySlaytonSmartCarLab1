@@ -23,4 +23,10 @@ public class Ultrasonic {
 	public static void getObstacleDistance() {
 		System.out.println( "Ultrasonic - Obstacle Detected");
 	}		
+	public static void powerOn() {
+		System.out.println( "Ultrasonic - Power On");
+	}	
+	public static void powerOff() {
+		System.out.println( "Ultrasonic - Power Off");
+	}	
 }
