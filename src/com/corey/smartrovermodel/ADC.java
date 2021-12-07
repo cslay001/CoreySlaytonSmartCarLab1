@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class ADC {
+public class ADC extends SmartRover {
 
 	private String maintenanceStatus;
 	private String powerStatus;

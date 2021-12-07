@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class Sound {
+public class Sound extends Buzzer {
 
 	private String maintenanceStatus;
 	private String fileLocation;

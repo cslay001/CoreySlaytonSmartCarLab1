@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class RaspberryPi {
+public class RaspberryPi extends ECU {
 
 	private String model;
 	private String location;

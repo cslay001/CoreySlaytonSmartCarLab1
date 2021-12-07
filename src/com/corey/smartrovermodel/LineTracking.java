@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class LineTracking {
+public class LineTracking extends Sensor {
 
 	private String maintenanceStatus;
 	private String powerStatus;

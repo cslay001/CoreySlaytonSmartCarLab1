@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class Sensor {
+public class Sensor extends Servo {
 
 	private String maintenanceStatus;
 	private String powerStatus;

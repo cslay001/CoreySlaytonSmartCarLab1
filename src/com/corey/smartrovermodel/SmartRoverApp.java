@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class SmartRoverApp {
+public class SmartRoverApp extends RaspberryPi {
 
 	private String maintenanceStatus;
 	private String powerStatus;

@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class ECU {
+public class ECU extends ADC {
 
 	private String maintenanceStatus;
 	private String powerStatus;

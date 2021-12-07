@@ -7,7 +7,7 @@ package com.corey.smartrovermodel;
  * @author corey
  *
  */
-public class Ultrasonic {
+public class Ultrasonic extends Sensor {
 
 	private String maintenanceStatus;
 	private String powerStatus;
