@@ -13,6 +13,9 @@ public class SmartRover {
 	private String location;
 	private String powerStatus;
 	private String maintenanceStatus;
+	private String softwareVersion;
+	private String systemCurrent;
+	private String systemBackup;
 	
 	public static void getFullSystemCheck() {
 		System.out.println( "SmartRover - FullSystemCheck OK");
@@ -29,23 +32,33 @@ public class SmartRover {
 	public static void powerOff() {
 		System.out.println( "SmartRover - Power Off");
 	}	
-	public static void move() {
-		System.out.println( "SmartRover - Moving");
+	public static void getModel() {
+		System.out.println( "SmartRover - Model XXX");
 	}
-	public static void avoidObstacle() {
-		System.out.println( "SmartRover - Obstacle Avoided");
+	public static void getPowerStatus() {
+		System.out.println( "SmartRover - Power XXX");
 	}
-	public static void beginVideo() {
-		System.out.println( "SmartRover - Video Recording Began");
+	public static void getSystemCurrent() {
+		System.out.println( "SmartRover - SystemCurrent located at XXX");
 	}	
-	public static void stopVideo() {
-		System.out.println( "SmartRover - Video Recording Stopped");
+	public static void getSystemBackup() {
+		System.out.println( "SmartRover - SystemBackup located at XXX");
 	}	
-	public static void recordPhoto() {
-		System.out.println( "SmartRover - Photo Taken");
+	public static void updateLocation() {
+		System.out.println( "SmartRover - Location Updated");
 	}		
-	
-	
+	public static void updatePowerStatus() {
+		System.out.println( "SmartRover - PowerStatus Updated");
+	}	
+	public static void downloadSystemUpdate() {
+		System.out.println( "SmartRover - SystemUpdate Downloading from XXX");
+	}
+	public static void replaceSystemBackup() {
+		System.out.println( "SmartRover - SystemBackUp Replaced by SystemCurrent");
+	}
+	public static void replaceSystemCurrent() {
+		System.out.println( "SmartRover - SystemCurrent Replaced by SystemBackup");
+	}
 	/**
 	 * @param args
 	 */
