@@ -3,12 +3,16 @@
  */
 package com.corey.smartrovermodel;
 
+import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
+
 /**
  * @author corey
  *
  */
-public class SmartRover {
+public class SmartRover implements SelfCheckCapable {
 
+	private String name;
 	private String model;
 	private String location;
 	private String powerStatus;
@@ -16,6 +20,17 @@ public class SmartRover {
 	private String softwareVersion;
 	private String systemCurrent;
 	private String systemBackup;
+
+	public SmartRover(String name, String model, String location, String powerStatus, String maintenanceStatus, String softwareVersion, String systemCurrent, String systemBackup) {
+		this.setName(name);
+		this.model = model;
+		this.location = location;
+		this.powerStatus = powerStatus;
+		this.maintenanceStatus = maintenanceStatus;
+		this.softwareVersion = softwareVersion;
+		this.systemCurrent = systemCurrent;
+		this.systemBackup = systemBackup;
+	}
 	
 	public static void getFullSystemCheck() {
 		System.out.println( "SmartRover - FullSystemCheck OK");
@@ -59,12 +74,41 @@ public class SmartRover {
 	public static void replaceSystemCurrent() {
 		System.out.println( "SmartRover - SystemCurrent Replaced by SystemBackup");
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		SmartRover mySmartRover = new SmartRover(null, null, null, null, null, null, null, null);
+		
+		System.out.println("New SmartRover: " + mySmartRover);
+		mySmartRover.runSelfCheck();
+	}
 
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.1);
+	}
+	
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "My SmartRover1";
+	}
+
+	@Override
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.basicSelfCheckRunner(this);
 	}
 
 }
+
