@@ -74,7 +74,7 @@ public class Servo implements SelfCheckCapable  {
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
-		return "My Servo";
+		return "My Servo1";
 	}
 
 	@Override
