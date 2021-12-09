@@ -33,7 +33,7 @@ public class SmartRover implements SelfCheckCapable {
 		systemCurrent = new String();
 		systemBackup = new String();
 		myADC = new ADC();
-		myServo = new servo();
+		myServo = new Servo();
 	}
 	
 	public static void getFullSystemCheck() {
