@@ -20,6 +20,8 @@ public class SmartRover implements SelfCheckCapable {
 	private String softwareVersion;
 	private String systemCurrent;
 	private String systemBackup;
+	private ADC myADC;
+	private Servo myServo;
 
 	public SmartRover(String name, String model, String location, String powerStatus, String maintenanceStatus, String softwareVersion, String systemCurrent, String systemBackup) {
 		this.setName(name);
@@ -107,7 +109,7 @@ public class SmartRover implements SelfCheckCapable {
 	@Override
 	public boolean runSelfCheck() {
 		// TODO Auto-generated method stub
-		return SelfCheckUtils.basicSelfCheckRunner(this);
+		return SelfCheckUtils.checkComponents(this, myADC, myServo);
 	}
 
 }

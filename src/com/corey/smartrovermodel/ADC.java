@@ -3,16 +3,23 @@
  */
 package com.corey.smartrovermodel;
 
+import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
+
 /**
  * @author corey
  *
  */
-public class ADC extends SmartRover {
+public class ADC extends SmartRover implements SelfCheckCapable {
 
+	
 	private String maintenanceStatus;
 	private String powerStatus;
 
-	
+	public ADC() {
+		maintenanceStatus = new String();
+		powerStatus = new String();
+	}
 	
 	public static void getFullSystemCheck() {
 		System.out.println( "ADC - FullSystemCheck set to OK");
@@ -35,4 +42,21 @@ public class ADC extends SmartRover {
 	public static void powerOff() {
 		System.out.println( "ADC - Power Off");
 	}	
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.1);
+	}
+	
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "My SmartRover1";
+	}
+
+	@Override
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.checkComponents(this);
+	}
 }

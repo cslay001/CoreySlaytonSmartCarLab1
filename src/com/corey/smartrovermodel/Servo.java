@@ -3,12 +3,19 @@
  */
 package com.corey.smartrovermodel;
 
+import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
 /**
  * @author corey
  *
  */
-public class Servo extends SmartRover {
+public class Servo extends SmartRover implements SelfCheckCapable  {
 
+	public Servo(String name, String model, String location, String powerStatus, String maintenanceStatus,
+			String softwareVersion, String systemCurrent, String systemBackup) {
+		super(name, model, location, powerStatus, maintenanceStatus, softwareVersion, systemCurrent, systemBackup);
+		// TODO Auto-generated constructor stub
+	}
 	private String maintenanceStatus;
 	private String powerStatus;
 	private String current_position;
@@ -56,5 +63,22 @@ public class Servo extends SmartRover {
 	}
 	public static void updateCurrentPosition() {
 		System.out.println( "Servo - Current Position updated to XXX");
+	}
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.1);
+	}
+	
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "My SmartRover1";
+	}
+
+	@Override
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.checkComponents(this);
 	}
 }
