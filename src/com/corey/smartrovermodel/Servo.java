@@ -9,18 +9,19 @@ import edu.fiu.sysdesign.SelfCheckUtils;
  * @author corey
  *
  */
-public class Servo extends SmartRover implements SelfCheckCapable  {
+public class Servo implements SelfCheckCapable  {
 
-	public Servo(String name, String model, String location, String powerStatus, String maintenanceStatus,
-			String softwareVersion, String systemCurrent, String systemBackup) {
-		super(name, model, location, powerStatus, maintenanceStatus, softwareVersion, systemCurrent, systemBackup);
-		// TODO Auto-generated constructor stub
-	}
 	private String maintenanceStatus;
 	private String powerStatus;
 	private String current_position;
 	private String home_position;
 
+	public Servo() {
+		maintenanceStatus = new String();
+		powerStatus = new String();
+		current_position = new String();
+		home_position = new String();
+	}
 	
 	public static void getFullSystemCheck() {
 		System.out.println( "Servo - FullSystemCheck OK");

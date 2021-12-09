@@ -10,7 +10,7 @@ import edu.fiu.sysdesign.SelfCheckUtils;
  * @author corey
  *
  */
-public class ADC extends SmartRover implements SelfCheckCapable {
+public class ADC implements SelfCheckCapable {
 
 	
 	private String maintenanceStatus;
@@ -42,21 +42,21 @@ public class ADC extends SmartRover implements SelfCheckCapable {
 	public static void powerOff() {
 		System.out.println( "ADC - Power Off");
 	}	
+	
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "My ADC1";
+	}
 	@Override
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub
 		return SelfCheckUtils.randomCheck(0.1);
 	}
-	
-	@Override
-	public String getComponentName() {
-		// TODO Auto-generated method stub
-		return "My SmartRover1";
-	}
-
 	@Override
 	public boolean runSelfCheck() {
 		// TODO Auto-generated method stub
-		return SelfCheckUtils.checkComponents(this);
+		return false;
 	}
+	
 }

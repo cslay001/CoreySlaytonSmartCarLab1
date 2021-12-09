@@ -23,15 +23,17 @@ public class SmartRover implements SelfCheckCapable {
 	private ADC myADC;
 	private Servo myServo;
 
-	public SmartRover(String name, String model, String location, String powerStatus, String maintenanceStatus, String softwareVersion, String systemCurrent, String systemBackup) {
-		this.setName(name);
-		this.model = model;
-		this.location = location;
-		this.powerStatus = powerStatus;
-		this.maintenanceStatus = maintenanceStatus;
-		this.softwareVersion = softwareVersion;
-		this.systemCurrent = systemCurrent;
-		this.systemBackup = systemBackup;
+	public SmartRover() {
+		name = new String();
+		model = new String();
+		location = new String();
+		powerStatus = new String();
+		maintenanceStatus = new String();
+		softwareVersion = new String();
+		systemCurrent = new String();
+		systemBackup = new String();
+		myADC = new ADC();
+		myServo = new servo();
 	}
 	
 	public static void getFullSystemCheck() {
@@ -87,7 +89,7 @@ public class SmartRover implements SelfCheckCapable {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		SmartRover mySmartRover = new SmartRover(null, null, null, null, null, null, null, null);
+		SmartRover mySmartRover = new SmartRover();
 		
 		System.out.println("New SmartRover: " + mySmartRover);
 		mySmartRover.runSelfCheck();
